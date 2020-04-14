@@ -1,0 +1,49 @@
+.adContainer{
+  min-height: calc(100vh);
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  .menu{
+    width: 15%;
+    border-radius: 4px;
+    background: #fff;
+    padding: 20px;
+    .navigation_item{
+      line-height: 20px;
+      color: #868da1;
+      margin-top: 12px;
+      cursor: pointer;
+    }
+  }
+  .content{
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    overflow-y: auto;
+    background: #fff;
+    border-radius: 4px;
+    box-sizing: border-box;
+    padding-right: 15%;
+   .title{
+     border-bottom: 1px solid #eee;
+     font-size: 18px;
+     font-weight: bold;
+     margin-bottom: 20px;
+     box-sizing: border-box;
+     padding-bottom: 5px;
+   }
+    .addIcon{
+      color: @primary-color;
+      cursor: pointer;
+      margin-left: 10px;
+    }
+  }
+  :global{
+    .ant-steps-item-title {
+      color: #868da1 !important;
+      font-weight: normal !important;
+      cursor: default;
+    }
+  }
+}

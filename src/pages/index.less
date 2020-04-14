@@ -1,0 +1,27 @@
+.container{
+  height: 100%;
+  width: 100%;
+  overflow-y: auto;
+  background: #f2f2f2;
+  position: relative;
+  .menu-layout{
+    height: 100%;
+    width: 200px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9;
+  }
+
+  .content-layout{
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-left: 200px;
+    overflow-y: auto;
+    z-index: 8;
+  }
+}
