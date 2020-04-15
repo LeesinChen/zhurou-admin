@@ -25,6 +25,14 @@ const Index = props => {
     location,
   }
 
+  if (['/login'].indexOf(location.pathname) > -1) {
+    return (
+      <div className="body">
+        {props.children}
+      </div>
+    )
+  }
+
   return (
     <>
       <Helmet>

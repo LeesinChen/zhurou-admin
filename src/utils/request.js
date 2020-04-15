@@ -3,6 +3,7 @@
  */
 import { extend } from 'umi-request';
 import { notification } from 'antd';
+import {getToken} from '@/utils/auth'
 
 const codeMessage = {
   200: '服务器成功返回请求的数据。',
@@ -50,27 +51,21 @@ const errorHandler = error => {
  */
 const request = extend({
   errorHandler, // 默认错误处理
-  // credentials: 'include', // 默认请求是否带上cookie
-  timeout: 1000000,
+  timeout: 10000,
   headers: {
-    Authorization: 'Bearer token'  // 前后端 走jwt
+    Authorization: 'Bearer '+ getToken()
   },
 });
-
 /***
  * response 拦截
  */
 request.interceptors.response.use(async (response) => {
   const data = await response.clone().json();
-
-
-  return response;
-
-  // if (data.code === 401 || data.Code === 401) {
-  //   window.location.href = '/login'
-  // } else {
-  //   return response;
-  // }
+  if (data.code === 401 || data.Code === 401) {
+    window.location.href = '/login'
+  } else {
+    return response;
+  }
 })
 
 export default request;

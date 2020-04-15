@@ -78,10 +78,12 @@ const View = (
           </Button>
           <Button onClick={handleReset}>清空</Button>
         </Col>
-        <Col span={9}>
+      </Row>
+      <Row gutter={24} style={{marginTop: 20}}>
+        <Col span={24}>
           <Button
+            size="large"
             type="primary"
-            style={{float: 'right'}}
             onClick={onAdd}
           >
             <Icon type="plus" />添加商品

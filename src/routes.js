@@ -10,9 +10,12 @@ module.exports = [
       { path: '/goods/add', component: '../pages/goods/edit', },
       { path: '/goods/edit', component: '../pages/goods/edit', },
 
-      { path: '/menu', icon: 'order', name: '订单管理', component: '../pages/dashboard', },
+      { path: '/order', icon: 'order', name: '订单管理', component: '../pages/dashboard', },
+
+      { path: '/login', component: '../pages/login', },
     ]
   },
+  { path: '/login', component: '../pages/login', },
   {
     component: './404'
   }
