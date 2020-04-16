@@ -44,7 +44,9 @@ const Index = props => {
         <div className={styles["menu-layout"]}>
           <Menu {...menuProps} />
         </div>
-        <div className={styles["content-layout"]}>{props.children}</div>
+        <div className={styles["content-layout"]}>
+          <div>{props.children}</div>
+        </div>
       </div>
     </>
    
